@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitio Oficial - Atención 24/7</title>
+  <meta name="description"
+    content="Sitio Oficial: Tu plataforma de confianza con atención las 24hs, mínima $1.000" />
+  <meta name="keywords"
+    content="Sitio Oficial, 24/7" />
+  <meta property="og:title" content="Sitio Oficial - Atención 24/7" />
+  <meta property="og:description"
+    content="24 horas del día." />
+  <meta property="og:image" content="./assets/logo.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    if (!window._fbq_loaded_) {
+      window._fbq_loaded_ = true;
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1054376420476852');
+      fbq('track', 'PageView', {}, { test_event_code: 'TEST6108' });
+    }
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-purple': '#0e041d',
+            'card-purple': 'rgba(26, 10, 42, 0.7)',
+            'neon-purple': '#c723f5',
+            'neon-green': '#00ff66',
+            'neon-cyan': '#00d2ff',
+            'card-bg': 'rgba(30, 10, 45, 0.65)',
+            'card-border': 'rgba(199, 35, 245, 0.25)',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'heading': ['Outfit', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'glow': 'glow 2s infinite alternate',
+            'float': 'float 4s ease-in-out infinite',
+            'spin-slow': 'spin 12s linear infinite',
+          },
+          keyframes: {
+            glow: {
+              '0%': { boxShadow: '0 0 15px rgba(199, 35, 245, 0.4)' },
+              '100%': { boxShadow: '0 0 35px rgba(199, 35, 245, 0.8), 0 0 15px rgba(0, 255, 102, 0.5)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style data-purpose="custom-utilities">
+    body {
+      background: radial-gradient(circle at center top, #381057 0%, #130525 45%, #080112 100%);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .glow-purple {
+      text-shadow: 0 0 20px rgba(199, 35, 245, 0.75);
+    }
+
+    .glow-green {
+      text-shadow: 0 0 20px rgba(0, 255, 102, 0.75);
+    }
+
+    .glow-purple-box {
+      box-shadow: 0 0 35px rgba(199, 35, 245, 0.45);
+    }
+
+    .glow-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glow-card-hover:hover {
+      border-color: rgba(199, 35, 245, 0.6);
+      box-shadow: 0 10px 40px -10px rgba(199, 35, 245, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .glass-card {
+      background: var(--tw-colors-card-bg);
+      border: 1px solid var(--tw-colors-card-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .btn-green {
+      background: linear-gradient(90deg, #00d2ff 0%, #00ff66 100%);
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.45);
+      transition: all 0.3s ease;
+    }
+
+    .btn-green:hover {
+      box-shadow: 0 0 35px rgba(0, 255, 102, 0.75);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0d0218;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2a0c47;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c723f5;
+    }
+
+    .toast-slide {
+      animation: slideIn 0.4s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white flex flex-col min-h-screen relative">
+
+  <!-- TOP LIVE STATUS BAR -->
+  <div class="w-full bg-[#16052d]/90 border-b border-neon-purple/20 py-2.5 px-4 sticky top-0 z-40 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center text-xs font-medium gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-neon-green"></span>
+        </span>
+        <span class="text-gray-200">SISTEMA 24/7 OPERATIVO:</span>
+        <span class="text-neon-green font-bold">Retiros Activos e Inmediatos</span>
+     
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="w-full max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+    <a href="#" class="flex items-center space-x-3 group">
+      <div
+        class="w-12 h-12 rounded-full p-0.5 bg-gradient-to-r from-neon-purple to-neon-cyan group-hover:scale-105 transition-transform">
+        <img src="./assets/logo.png" alt="Sitio Oficial Logo" class="w-full h-full rounded-full object-cover" />
+      </div>
+      <div>
+        <span class="block text-[10px] tracking-widest text-neon-green font-semibold uppercase">Plataforma Oficial</span>
+      </div>
+    </a>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow flex flex-col items-center pt-8 px-4 pb-16 w-full max-w-5xl mx-auto space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="flex flex-col items-center text-center space-y-8 w-full relative">
+
+      <!-- Background Ambient Glow -->
+      <div
+        class="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-purple/20 rounded-full filter blur-[100px] pointer-events-none">
+      </div>
+
+      <!-- Avatar / Logo -->
+      <div
+        class="relative inline-block glow-purple-box rounded-full p-1.5 bg-gradient-to-b from-neon-purple via-neon-cyan/50 to-transparent transition-transform hover:scale-105 duration-300">
+        <img alt="Sitio Oficial Logo"
+          class="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-4 border-[#2a0a40] object-cover"
+          src="./assets/logo.png" />
+
+        <!-- Verification Badge -->
+        <div
+          class="absolute bottom-2 right-2 bg-neon-purple text-white rounded-full p-2 border-4 border-[#130525] shadow-lg animate-bounce">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+            <path clip-rule="evenodd"
+              d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Main Headline & Subtitle -->
+      <div class="space-y-4 max-w-3xl">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neon-purple/10 border border-neon-purple/30 text-neon-purple text-xs font-bold uppercase tracking-widest mb-2">
+          <span>💎 PLATAFORMA N° 1 DE ARGENTINA</span>
+        </div>
+        <h1
+          class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight font-heading">
+          Atención <span class="text-neon-purple glow-purple">24/7</span>
+        </h1>
+       
+      </div>
+
+      <!-- WhatsApp Button under hero text with Meta Pixel Contact Event -->
+      <div class="w-full max-w-md pt-2">
+        <a class="btn-green text-black font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
+          href="https://wa.me/?text=Hola%20Sitio%20Oficial,%20quiero%20usuario"
+          onclick="if(window.fbq) fbq('track', 'Contact', { value: 0.00, currency: 'ARS' });" target="_blank" rel="noopener noreferrer">
+          <svg class="h-7 w-7 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path clip-rule="evenodd"
+              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.183-.573c.978.58 1.711.848 3.146.848 3.182 0 5.767-2.585 5.767-5.766 0-3.18-2.585-5.766-5.767-5.767zm3.332 8.358c-.145.417-1.042.843-1.442.884-.33.033-.787.05-1.936-.425-1.385-.572-2.275-2.001-2.342-2.091-.067-.09-.56-.745-.56-1.421 0-.676.353-1.009.479-1.139.125-.13.271-.162.361-.162.09 0 .18 0 .26.004.084.004.195-.034.305.233.116.279.394.96.43.1037.035.076.059.166.012.261-.046.095-.07.153-.139.231-.069.078-.145.166-.204.229-.067.067-.138.14-.06.275.078.134.347.572.74 1.019.508.577.944.757 1.08.825.136.068.215.056.296-.036.08-.093.346-.401.438-.539.09-.138.18-.115.305-.069.124.047.788.371.923.439.135.068.225.102.257.159.034.056.034.33-.111.748z"
+              fill-rule="evenodd"></path>
+          </svg>
+          <span class="tracking-wide">CONTACTAR POR WHATSAPP</span>
+          <svg class="h-6 w-6 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+          </svg>
+        </a>
+      </div>
+
+    </section>
+    <!-- END: Hero Section -->
+
+  </main>
+  <!-- END: MainContent -->
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#0a0214] py-10 px-4 text-center border-t border-white/10 mt-auto space-y-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+      <div class="flex items-center space-x-2">
+        <img src="./assets/logo.png" alt="Sitio Oficial" class="w-6 h-6 rounded-full" />
+        <span class="font-bold text-white">SITIO OFICIAL</span>
+        <span>© 2026 SITIO OFICIAL. TODOS LOS DERECHOS RESERVADOS.</span>
+      </div>
+      <div class="flex space-x-6 text-gray-400">
+        <a href="#" class="hover:text-neon-purple transition-colors">Términos</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="flex justify-center space-x-2 pt-2">
+      <div class="w-2 h-2 rounded-full bg-neon-purple opacity-50"></div>
+      <div class="w-2 h-2 rounded-full bg-neon-purple opacity-75"></div>
+      <div class="w-2 h-2 rounded-full bg-neon-purple"></div>
+    </div>
+  </footer>
+</body>
+
+</html>

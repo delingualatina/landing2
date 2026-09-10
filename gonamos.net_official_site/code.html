@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sitio Oficial - Premium Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-purple': '#130525',
+            'neon-purple': '#c723f5',
+            'neon-green': '#00ff66',
+            'card-bg': 'rgba(30, 10, 45, 0.6)',
+            'card-border': 'rgba(199, 35, 245, 0.2)',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+    body {
+      background: radial-gradient(circle at center top, #361054 0%, #130525 50%, #0a0214 100%);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .glow-purple {
+      text-shadow: 0 0 15px rgba(199, 35, 245, 0.6);
+    }
+    
+    .glow-purple-box {
+      box-shadow: 0 0 30px rgba(199, 35, 245, 0.4);
+    }
+
+    .glass-card {
+      background: var(--tw-colors-card-bg);
+      border: 1px solid var(--tw-colors-card-border);
+      backdrop-filter: blur(10px);
+    }
+    
+    .btn-green {
+      background: linear-gradient(90deg, #00d2ff 0%, #00ff66 100%);
+      box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-green:hover {
+      box-shadow: 0 0 30px rgba(0, 255, 102, 0.6);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+<!-- BEGIN: MainContent -->
+<main class="flex-grow flex flex-col items-center pt-20 px-4 pb-12 w-full max-w-5xl mx-auto space-y-16">
+<!-- BEGIN: Hero Section -->
+<section class="flex flex-col items-center text-center space-y-8 w-full">
+<!-- Avatar/Logo -->
+<div class="relative inline-block glow-purple-box rounded-full p-1 bg-gradient-to-b from-neon-purple to-transparent">
+<img alt="Gonamos Net Logo" class="w-48 h-48 rounded-full border-4 border-[#2a0a40] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1LHHTQXr9wsNNkDOTPcglJOOtZyvumSD_J_Y0pOnrE9f1TfRntVJ4cE3ht64nMwGLcLTOg9FKPYmLbmHxbMxYVmGrcTY7G_yunxDh-aRqpbNIpfofIYPJhv0NgXt-CXlrUBtfcq6Wwa132zCMxh2G-8Xqc8caaYTRoDYek8yzDqYSYEe2uNXx7uMAUFsFSAZyAKVqiLE0Z-knLPREbBVfiHxSQiCemHXM--35Fo4cdwbwma7qW9XP"/>
+<!-- Verification Badge -->
+<div class="absolute bottom-2 right-2 bg-neon-purple text-white rounded-full p-1.5 border-2 border-[#130525]">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+<!-- Heading -->
+<div>
+<h1 class="text-6xl font-extrabold tracking-tight">
+          Atención <span class="text-neon-purple glow-purple">24/7</span>
+</h1>
+<p class="text-gray-300 mt-4 text-lg">retiros inmediatos las 24 horas del día.</p>
+</div>
+<!-- CTA Button -->
+<a class="btn-green text-black font-bold text-lg px-8 py-4 rounded-full flex items-center justify-center space-x-3 hover:opacity-90" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.183-.573c.978.58 1.711.848 3.146.848 3.182 0 5.767-2.585 5.767-5.766 0-3.18-2.585-5.766-5.767-5.766zm3.332 8.358c-.145.417-1.042.843-1.442.884-.33.033-.787.05-1.936-.425-1.385-.572-2.275-2.001-2.342-2.091-.067-.09-.56-.745-.56-1.421 0-.676.353-1.009.479-1.139.125-.13.271-.162.361-.162.09 0 .18 0 .26.004.084.004.195-.034.305.233.116.279.394.96.43.1037.035.076.059.166.012.261-.046.095-.07.153-.139.231-.069.078-.145.166-.204.229-.067.067-.138.14-.06.275.078.134.347.572.74 1.019.508.577.944.757 1.08.825.136.068.215.056.296-.036.08-.093.346-.401.438-.539.09-.138.18-.115.305-.069.124.047.788.371.923.439.135.068.225.102.257.159.034.056.034.33-.111.748z" fill-rule="evenodd"></path>
+</svg>
+<span>CONTACTAR POR WHATSAPP</span>
+<svg class="h-6 w-6 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+<!-- Limits Card -->
+<div class="glass-card rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-6">
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Mínima</h3>
+<p class="text-4xl font-bold text-white glow-purple">$1.000</p>
+</div>
+<div class="w-16 h-px bg-neon-purple/50"></div>
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Retiro Mínimo</h3>
+<p class="text-5xl font-bold text-neon-purple glow-purple">$4.000</p>
+</div>
+<div class="flex space-x-8 pt-4">
+<div class="flex flex-col items-center">
+<svg class="h-6 w-6 text-neon-purple mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] uppercase tracking-wider text-gray-400">Original</span>
+</div>
+<div class="flex flex-col items-center">
+<svg class="h-6 w-6 text-neon-purple mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] uppercase tracking-wider text-gray-400">Fast Retiro</span>
+</div>
+</div>
+</div>
+<!-- Payment Methods Card -->
+<div class="glass-card rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-8">
+<h3 class="text-xs uppercase tracking-widest text-neon-purple font-semibold mb-2">Medios De Pago Instantáneos</h3>
+<div class="flex justify-center items-center space-x-4">
+<div class="bg-white rounded-xl w-20 h-20 flex items-center justify-center shadow-lg">
+<svg class="h-8 w-8 text-black" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="bg-white rounded-xl w-24 h-24 flex items-center justify-center shadow-lg p-2">
+<img alt="Mercado Pago" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs0qrApThpqBs9NUAWGlQC8bllYNfOdQWgDinHLdBYNwGEgLoCwND2VYoefLljdE_nPwmlrtXwna6OS7tkjg9cYTEE8EKIrkLx28nfrqoBhky5VazEAQMMRVXSqNCTQHY_5-OF_wKDNQoT3C9LZLFNpmHQUVAb94V2t3oqJFFq6EvJJgpvaD4W-0nr10TZEYITm-U1LENterPcvGFjNzhmgDJD35Xp7Mf0eNKqbYMzWKujHI8WJ5OS"/>
+</div>
+<div class="bg-white rounded-xl w-20 h-20 flex items-center justify-center shadow-lg p-3">
+<img alt="Ualá" class="w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY9peTdVUt6sL0GP_IlKU8Pr7HHkkXcKC0Dn8FpTdeWUyPWiekwiP3nbuY4b97gy6F2EOtd3iUzz9aFvBnJfJhva-hD3nuhVOBT60HxSInq6Xv5totQDyrEqMdlRhgzvEJXvM4VYPmFBvUVjDao_JpdV64LRu4etY7uRBSQZvVSBEAmf1vcGPh3NFgsfeXb7uJRXad9yzTsQ6p7TJutKJ1fjPWmICs4SBWym12NyfuE5F9O5WYlccp"/>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Info Grid -->
+<!-- BEGIN: Social Proof -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+<!-- Community -->
+<div class="glass-card rounded-2xl p-6 flex items-center justify-between">
+<div class="flex items-center">
+<div class="flex -space-x-3 mr-4">
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-deep-purple object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBStbGN-4SZdjU8AfBC_kc65anZbnQLUOKWDF-cARYuF5_5IRkLPGih8rFtI1Hg8dtmqIc48ztOn_zWiSBQe3FqkJTVRBffBypFYFKe0d4ehlGdf82VuIjvNQcEXwjg0GPTJouNWUP5atODk1M089hQZrx3NT0761d-KSxDq_nD2ZYUvkk5kyAf8sxNPUTikmpRgbQ2x4qznkFNFeo_Opi7ozMYZIJZftHd_E9OyYf4JXM5AFolrvqk"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-deep-purple object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr_R3KFDpDXwWq5OwDIxSaFS6K5bUD9vc647p0GJYQu4QsSqVj-UjWVEQPbd80bAjnt2lAFl1vYGpKnUcWwMQlbL8ZvahHLSGrZ_nRweVok5cug1RNUt_DEEedheyRXMxk3JEe25HYawK8F5CupitleD8glzkHo00hYSshG-hM1N7rtyE7Zx5gLMSw7fT2dQm3C4OKdsNBMRNsQ6zHqeCdYpVB7jzmpf39N2hNycsOziE90c91nlOb"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-deep-purple object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHZF9tFSLEeY8NYs6KPUgcmHxz1l4f3PlhqMBnSpBe5AYPHW2WxsYgfSF8Vr22IBCflE2nCyqMhCnLlL5FCRvhenLTJnDbktk8_3ahOMt9_vC2vjKaM0aBGPqnCERRu6bDPFagy2ZG1NSi4e3NhmZ1POSxUOjFT6JZYhWM9IwPUci96wvFyHgOmqpqOwnT_YIhz_tJVNjnWCpQgOjBJBoeqMJe1fwStQvaYNUPjBE7FQ75lWjQrh9D"/>
+<div class="w-10 h-10 rounded-full border-2 border-deep-purple bg-neon-purple flex items-center justify-center text-white font-bold text-sm">
+              +
+            </div>
+</div>
+<div>
+<h4 class="font-bold text-white text-sm">Comunidad Ganadora</h4>
+<p class="text-[10px] uppercase tracking-wider text-neon-purple">Acceso VIP Activo</p>
+</div>
+</div>
+</div>
+<!-- Trustpilot -->
+<div class="glass-card rounded-2xl p-6 flex items-center justify-between">
+<div>
+<h4 class="font-bold text-white text-sm mb-1">"Servicio de Excelencia"</h4>
+<div class="flex space-x-1">
+<!-- Trustpilot Stars Placeholder -->
+<div class="bg-[#00b67a] p-1 rounded-sm"><svg class="h-3 w-3 text-white" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div>
+<div class="bg-[#00b67a] p-1 rounded-sm"><svg class="h-3 w-3 text-white" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div>
+<div class="bg-[#00b67a] p-1 rounded-sm"><svg class="h-3 w-3 text-white" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div>
+<div class="bg-[#00b67a] p-1 rounded-sm"><svg class="h-3 w-3 text-white" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div>
+<div class="bg-[#00b67a] p-1 rounded-sm"><svg class="h-3 w-3 text-white" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-wider text-gray-400 mb-1">Trustpilot</p>
+<p class="font-bold text-2xl text-white">4.9/5</p>
+</div>
+</div>
+</div>
+<!-- END: Social Proof -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="w-full bg-[#0a0214] py-8 text-center border-t border-white/5 mt-auto">
+<p class="text-xs tracking-widest text-gray-500 uppercase">© 2026 GANAPREMIUM. TODOS LOS DERECHOS RESERVADOS.</p>
+<div class="flex justify-center space-x-2 mt-4">
+<div class="w-2 h-2 rounded-full bg-neon-purple opacity-50"></div>
+<div class="w-2 h-2 rounded-full bg-neon-purple opacity-75"></div>
+<div class="w-2 h-2 rounded-full bg-neon-purple"></div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
