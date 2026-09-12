@@ -17,23 +17,20 @@
 
   <!-- Meta Pixel Code -->
   <script>
-    if (!window._fbq_loaded_) {
-      window._fbq_loaded_ = true;
-      !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return; n = f.fbq = function () {
-          n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-        n.queue = []; t = b.createElement(e); t.async = !0;
-        t.src = v; s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-      }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1713967079582707');
-      fbq('track', 'PageView', {}, { test_event_code: 'TEST6108' });
-    }
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1073364358855874');
+    fbq('track', 'PageView');
   </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1073364358855874&ev=PageView&noscript=1"
+  /></noscript>
   <!-- End Meta Pixel Code -->
 
   <!-- Google Fonts -->
@@ -139,6 +136,17 @@
       transform: translateY(-2px) scale(1.02);
     }
 
+    .btn-telegram {
+      background: linear-gradient(90deg, #0088cc 0%, #00c6ff 100%);
+      box-shadow: 0 0 25px rgba(0, 198, 255, 0.45);
+      transition: all 0.3s ease;
+    }
+
+    .btn-telegram:hover {
+      box-shadow: 0 0 35px rgba(0, 198, 255, 0.75);
+      transform: translateY(-2px) scale(1.02);
+    }
+
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -186,7 +194,7 @@
         </span>
         <span class="text-gray-200">SISTEMA 24/7 OPERATIVO:</span>
         <span class="text-neon-green font-bold">Retiros Activos e Inmediatos</span>
-     
+      </div>
     </div>
   </div>
 
@@ -245,8 +253,23 @@
        
       </div>
 
-      <!-- WhatsApp Button under hero text with Meta Pixel Contact Event -->
-      <div class="w-full max-w-md pt-2">
+      <!-- Action Buttons: Telegram above, WhatsApp below with Meta Pixel Contact Event -->
+      <div class="w-full max-w-md pt-2 flex flex-col space-y-4">
+        <!-- Telegram Button (Arriba) -->
+        <a class="btn-telegram text-white font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
+          href="https://t.me/"
+          onclick="if(window.fbq) fbq('track', 'Contact', { value: 0.00, currency: 'ARS' });" target="_blank" rel="noopener noreferrer">
+          <svg class="h-7 w-7 group-hover:scale-110 transition-transform fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+          </svg>
+          <span class="tracking-wide">CONTACTAR POR TELEGRAM</span>
+          <svg class="h-6 w-6 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+          </svg>
+        </a>
+
+        <!-- WhatsApp Button (Debajo) -->
         <a class="btn-green text-black font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
           href="https://wa.me/?text=Hola%20Sitio%20Oficial,%20quiero%20usuario"
           onclick="if(window.fbq) fbq('track', 'Contact', { value: 0.00, currency: 'ARS' });" target="_blank" rel="noopener noreferrer">

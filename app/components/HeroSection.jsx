@@ -1,19 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import { getWhatsAppLink } from "@/config/site";
+import { getWhatsAppLink, getTelegramLink } from "@/config/site";
 
 export default function HeroSection() {
   const whatsappUrl = getWhatsAppLink("Hola quiero usuario");
+  const telegramUrl = getTelegramLink();
 
-  const handleWhatsAppClick = () => {
+  const handleContactClick = (channel) => {
     if (typeof window !== "undefined") {
       if (typeof window.fbq === "function") {
         window.fbq("track", "Contact", { value: 0.00, currency: "ARS" });
-        console.log("Meta Pixel: Contact event sent successfully with value and currency");
+        console.log(`Meta Pixel: Contact event (${channel}) sent successfully with value and currency`);
       } else if (window._fbq) {
         window._fbq.push(["track", "Contact", { value: 0.00, currency: "ARS" }]);
-        console.log("Meta Pixel: Contact event queued with value and currency");
+        console.log(`Meta Pixel: Contact event (${channel}) queued with value and currency`);
       } else {
         console.warn("Meta Pixel (window.fbq) is not loaded or is blocked by an ad blocker.");
       }
@@ -60,12 +61,30 @@ export default function HeroSection() {
         </h1>
       </div>
 
-      {/* Hero WhatsApp Contact Button */}
-      <div className="w-full max-w-md pt-2">
+      {/* Action Buttons: Telegram above, WhatsApp below */}
+      <div className="w-full max-w-md pt-2 flex flex-col space-y-4">
+        {/* Telegram Button (Arriba) */}
+        <a
+          className="btn-telegram text-white font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
+          href={telegramUrl}
+          onClick={() => handleContactClick("Telegram")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg className="h-7 w-7 group-hover:scale-110 transition-transform fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+          </svg>
+          <span className="tracking-wide">CONTACTAR POR TELEGRAM</span>
+          <svg className="h-6 w-6 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
+          </svg>
+        </a>
+
+        {/* WhatsApp Button (Debajo) */}
         <a
           className="btn-green text-black font-extrabold text-lg sm:text-xl px-8 py-5 rounded-full flex items-center justify-center space-x-3 w-full shadow-2xl group hover:no-underline"
           href={whatsappUrl}
-          onClick={handleWhatsAppClick}
+          onClick={() => handleContactClick("WhatsApp")}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -85,3 +104,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

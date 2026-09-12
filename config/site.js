@@ -1,9 +1,9 @@
-// Configuración centralizada para Vercel y Next.js
 export const SITE_CONFIG = {
   name: "Sitio Oficial",
   // Número por defecto en caso de no definir variable en Vercel
   fallbackNumber: "",
   defaultMessage: "Hola Sitio Oficial, quiero usuario",
+  defaultTelegramLink: "https://t.me/",
 };
 
 /**
@@ -21,3 +21,11 @@ export function getWhatsAppLink(customMessage) {
   // Si no se definió variable de entorno, abre el selector de WhatsApp con el mensaje predeterminado
   return `https://wa.me/?text=${text}`;
 }
+
+/**
+ * Retorna el enlace de Telegram usando la variable de entorno NEXT_PUBLIC_TELEGRAM_LINK configurada en Vercel.
+ */
+export function getTelegramLink() {
+  return process.env.NEXT_PUBLIC_TELEGRAM_LINK || SITE_CONFIG.defaultTelegramLink;
+}
+
