@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '1054376420476852');
+                fbq('init', '1713967079582707');
                 fbq('track', 'PageView', {}, { test_event_code: 'TEST6108' });
               }
             `,
